@@ -4,10 +4,12 @@ class MuseumsController < ApplicationController
   # GET /museums
   def index
     @museums = Museum.all
-    @markers = @museums.geocoded.map do |museum|
+
+    @markers = @museums.geocoded.map do |flat|
       {
         lat: museum.latitude,
-        lng: museum.longitude
+        lng: museum.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { museum: museum })
       }
     end
   end

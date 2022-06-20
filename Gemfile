@@ -58,3 +58,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simple_form', github: 'heartcombo/simple_form'
 
 gem "geocoder"
+
+gem 'stimulus-rails'
+
+gem 'bootstrap', '~> 5.1.3'
